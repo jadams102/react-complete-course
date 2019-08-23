@@ -18,7 +18,7 @@ class App extends Component {
         <h1>Hi, I'm a React App!</h1>
         <p>THIS IS REALLY WORKING</p>
         <button>Switch Name</button>
-        <Person name="Joel" age="30" />
+        <Person name={this.state.persons[0].name} age="30" />
         <Person name="Morrigan" age="21"/>
         <Person name="Jack" age="27">My Hobbies include being rad as fuck</Person>
       </div>
