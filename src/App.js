@@ -10,7 +10,7 @@ class App extends Component {
       { name: 'Morrigan', age: 21 },
       { name: 'Jack', age: 27 }
     ],
-    showpersons: false;
+    showpersons: false
   }
 
   switchNameHandler = (newName) => {
@@ -35,7 +35,8 @@ class App extends Component {
   }
 
   togglePersonsHandler = () => {
-
+    const doesShow = this.state.showpersons;
+    this.setState({showpersons: !doesShow});
   }
 
   render() {
