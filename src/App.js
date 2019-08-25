@@ -57,7 +57,7 @@ class App extends Component {
           onClick={this.togglePersonsHandler}>Switch Name</button>
 
         {
-          this.state.showpersons ?
+          this.state.showpersons === true ?
             <div>
               <Person
                 name={this.state.persons[0].name}
