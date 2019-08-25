@@ -56,9 +56,6 @@ class App extends Component {
         <button
           style={style}
           onClick={this.togglePersonsHandler}>Toggle Persons</button>
-
-        {
-          this.state.showpersons === true ?
             <div>
               <Person
                 name={this.state.persons[0].name}
@@ -71,8 +68,7 @@ class App extends Component {
               <Person
                 name={this.state.persons[2].name}
                 age={this.state.persons[2].age}>My Hobbies include being rad as fuck</Person>
-            </div> : null
-        }
+            </div>
 
       </div>
     );
