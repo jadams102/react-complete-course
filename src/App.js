@@ -76,6 +76,7 @@ class App extends Component {
         <button
           style={style}
           onClick={this.togglePersonsHandler}>Toggle Persons</button>
+          {persons}
       </div>
     );
     // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'It work?'));
