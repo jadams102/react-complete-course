@@ -84,7 +84,7 @@ class App extends Component {
 
     return (
       <div className={classes.App}>
-        <button onClick={() => { this.setState({ showCockpit: false }) }}>Remove Cockpit</button>
+        <button onClick={() => { this.state.showCockpit ? (this.setState({ showCockpit: false })) : (this.setState({showCockpit : true})) }}>Remove Cockpit</button>
         {this.state.showCockpit ? (
           <Cockpit
             title={this.props.appTitle}
