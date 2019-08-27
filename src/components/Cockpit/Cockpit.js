@@ -1,6 +1,17 @@
 import React from 'react';
 
 const cockpit = (props) => {
+
+    const assignedClasses = [];
+
+    if (props.persons.length <= 2) {
+      assignedClasses.push(classes.red);
+    }
+
+    if (props.persons.length <= 1) {
+      assignedClasses.push(classes.bold);
+    }
+
     return (
         <div>
             <h1>Hi, I'm a React App!</h1>
