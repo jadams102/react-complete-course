@@ -5,9 +5,11 @@ const persons = (props) => (
     props.persons.map((person, index) => {
         return <Person
             key={person.id}
-            click={() => this.deletePersonHandler(index)}
+            click={() => props.clicked(index)}
             name={person.name}
             age={person.age}
-            changed={(event) => this.nameChangedHandler(event, person.id)} />
+            changed={(event) => props.changed(event, person.id)} />
       })
 );
+
+export default persons;
