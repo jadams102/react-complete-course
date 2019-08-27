@@ -5,6 +5,12 @@ const cockpit = (props) => {
 
     const assignedClasses = [];
 
+    let btnClass = '';
+
+    if(props.showPersons) {
+        btnClass = classes.red;
+    }
+
     if (props.persons.length <= 2) {
       assignedClasses.push(classes.red);
     }

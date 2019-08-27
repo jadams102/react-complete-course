@@ -48,7 +48,6 @@ class App extends Component {
   render() {
 
     let persons = null;
-    let btnClass = '';
 
     if (this.state.showpersons) {
       persons = (
@@ -60,9 +59,6 @@ class App extends Component {
           />
         </div>
       );
-
-      btnClass = classes.red
-
     }
 
 
