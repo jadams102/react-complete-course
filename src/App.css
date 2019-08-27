@@ -2,10 +2,6 @@
   text-align: center;
 }
 
-.red {
-  color: red;
-}
-
 .bold {
   font-weight: bold;
 }
@@ -23,10 +19,10 @@
   color: black;
 }
 
-.App button.Red {
+.App button.red {
   background-color: red;
 }
 
-.App button.Red:hover {
+.App button.red:hover {
   background-color: salmon;
 }
