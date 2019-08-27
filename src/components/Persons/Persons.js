@@ -4,7 +4,7 @@ import Person from './Person/Person';
 class Persons extends Component {
     static getDerivedStateFromProps(props, state) {
         console.log('[Persons.js] getDerivedStateFromProps');
-        return this.state;
+        return state;
     }
 
     shouldComponentUpdate(nextProps, nextState) {
@@ -14,6 +14,10 @@ class Persons extends Component {
 
     getSnapshotBeforeUpdate(prevProps, prevState) {
         console.log('[Persons.js] getSnapshotBeforeUpdate');
+    }
+
+    componentDidUpdate() {
+        console.log('[Persons.js] componentDidUpdate')
     }
 
     render() {
