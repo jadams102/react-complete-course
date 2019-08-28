@@ -4,8 +4,9 @@ import AuthContext from '../../context/auth-context';
 
 const cockpit = (props) => {
     const toggleBtnRef = useRef(null);
-
     const authContext = useContext(AuthContext);
+
+    console.log(authContext.authenticated);
 
     useEffect(() => {
         toggleBtnRef.current.click()
@@ -54,9 +55,7 @@ const cockpit = (props) => {
                 className={btnClass}
                 onClick={props.clicked}>Toggle Persons
             </button>
-            <AuthContext.Consumer>
-                {(context) => <button onClick={context.login}>Log In</button>}
-            </AuthContext.Consumer>
+            <button onClick={authContext.login}>Log In</button>
         </div>
     );
 };
