@@ -98,8 +98,7 @@ class App extends Component {
     return (
       <Aux>
         <button onClick={() => { this.state.showCockpit ? (this.setState({ showCockpit: false })) : (this.setState({ showCockpit: true })) }}>Remove Cockpit</button>
-        <AuthContext.Provider>
-
+        <AuthContext.Provider value = {{authenticated: this.state.authenticated, login: this.loginHandler}} >
           {this.state.showCockpit ? (
             <Cockpit
               title={this.props.appTitle}
@@ -109,7 +108,6 @@ class App extends Component {
               login={this.loginHandler}
             />
           ) : null}
-
           {persons}
         </AuthContext.Provider>
 
